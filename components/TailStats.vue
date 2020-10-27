@@ -3,7 +3,7 @@
     <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl font-extrabold leading-9 text-gray-900 sm:text-4xl sm:leading-10">
-          Our experienced staff is a cut above the rest.
+          Our experienced staff is ready to help you.
         </h2>
         <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
           Thousands of happy business owners can't be wrong.
@@ -18,10 +18,10 @@
             <dl class="bg-white rounded-lg shadow-lg sm:grid sm:grid-cols-3">
               <div class="flex flex-col p-6 text-center border-b border-gray-100 sm:border-0 sm:border-r">
                 <dt id="item-1" class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
-                  Cities Served
+                  Buildings Cleaned
                 </dt>
                 <dd class="order-1 text-5xl font-extrabold leading-none text-blue-600" aria-describedby="item-1">
-                  500
+                  500+
                 </dd>
               </div>
               <div class="flex flex-col p-6 text-center border-t border-b border-gray-100 sm:border-0 sm:border-l sm:border-r">

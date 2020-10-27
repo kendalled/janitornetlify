@@ -1,35 +1,35 @@
 <template>
   <div class="bg-gray-900">
     <div class="pt-12 sm:pt-16 lg:pt-24">
-      <div class="max-w-screen-xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <div class="max-w-screen-xl px-4 mx-auto text-center sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto lg:max-w-none">
-          <h2 class="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">
+          <h2 class="text-lg font-semibold leading-6 tracking-wider text-gray-300 uppercase">
             Pricing
           </h2>
-          <p class="mt-2 text-3xl leading-9 font-extrabold text-white sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none">
+          <p class="mt-2 text-3xl font-extrabold leading-9 text-white sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none">
             The right price for your business.
           </p>
           <p class="mt-2 text-xl leading-7 text-gray-300">
-            We don't aim to break the bank. Our scalable pricing stucture offers something for everybody.
+            We don't try to break the bank. Our scalable pricing stucture offers something for everybody.
           </p>
         </div>
       </div>
     </div>
     <div class="mt-8 bg-gray-50 sm:mt-12 lg:mt-16">
       <div class="relative">
-        <div class="absolute inset-0 h-3/4 bg-gray-900" />
-        <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="absolute inset-0 bg-gray-900 h-3/4" />
+        <div class="relative z-10 max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
           <div class="max-w-md mx-auto lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5">
-            <div class="rounded-lg shadow-lg overflow-hidden">
+            <div class="overflow-hidden rounded-lg shadow-lg">
               <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
                 <div>
-                  <span class="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-blue-100 text-blue-700">
+                  <span class="inline-flex px-4 py-1 text-sm font-semibold leading-5 tracking-wide text-blue-700 uppercase bg-blue-100 rounded-full">
                     Standard
                   </span>
                 </div>
-                <div class="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
-                  $49
-                  <span class="ml-1 text-2xl leading-8 font-medium text-gray-500">
+                <div class="flex items-baseline mt-4 text-6xl font-extrabold leading-none">
+                  $249
+                  <span class="ml-1 text-2xl font-medium leading-8 text-gray-500">
                     /mo
                   </span>
                 </div>
@@ -41,17 +41,17 @@
                 <ul>
                   <li class="flex items-start">
                     <div class="flex-shrink-0">
-                      <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                     <p class="ml-3 text-base leading-6 text-gray-700">
-                      Self supplied materials
+                      Deep clean (sweep, mop, vacuum, dust)
                     </p>
                   </li>
-                  <li class="mt-4 flex items-start">
+                  <li class="flex items-start mt-4">
                     <div class="flex-shrink-0">
-                      <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -59,19 +59,19 @@
                       Multiple locations
                     </p>
                   </li>
-                  <li class="mt-4 flex items-start">
+                  <li class="flex items-start mt-4">
                     <div class="flex-shrink-0">
-                      <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                     <p class="ml-3 text-base leading-6 text-gray-700">
-                      Same-day turnaround time
+                      Disinfectant included
                     </p>
                   </li>
-                  <li class="mt-4 flex items-start">
+                  <li class="flex items-start mt-4">
                     <div class="flex-shrink-0">
-                      <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -81,22 +81,22 @@
                   </li>
                 </ul>
                 <div class="mt-6 rounded-md shadow">
-                  <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                  <a href="#" class="flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-gray-900 border border-transparent rounded-md hover:bg-gray-800 focus:outline-none focus:shadow-outline">
                     Get started
                   </a>
                 </div>
               </div>
             </div>
-            <div class="mt-4 rounded-lg shadow-lg overflow-hidden lg:mt-0">
+            <div class="mt-4 overflow-hidden rounded-lg shadow-lg lg:mt-0">
               <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
                 <div>
-                  <span class="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-blue-100 text-blue-700">
+                  <span class="inline-flex px-4 py-1 text-sm font-semibold leading-5 tracking-wide text-blue-700 uppercase bg-blue-100 rounded-full">
                     Enterprise
                   </span>
                 </div>
-                <div class="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
-                  $79
-                  <span class="ml-1 text-2xl leading-8 font-medium text-gray-500">
+                <div class="flex items-baseline mt-4 text-6xl font-extrabold leading-none">
+                  $329
+                  <span class="ml-1 text-2xl font-medium leading-8 text-gray-500">
                     /mo
                   </span>
                 </div>
@@ -108,7 +108,7 @@
                 <ul>
                   <li class="flex items-start">
                     <div class="flex-shrink-0">
-                      <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -116,9 +116,9 @@
                       Overnight service
                     </p>
                   </li>
-                  <li class="mt-4 flex items-start">
+                  <li class="flex items-start mt-4">
                     <div class="flex-shrink-0">
-                      <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -126,29 +126,29 @@
                       Large scale cleaning
                     </p>
                   </li>
-                  <li class="mt-4 flex items-start">
+                  <li class="flex items-start mt-4">
                     <div class="flex-shrink-0">
-                      <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                     <p class="ml-3 text-base leading-6 text-gray-700">
-                      Medical grade antibacterial
+                      Window cleaning, carpet spotting, supplies
                     </p>
                   </li>
-                  <li class="mt-4 flex items-start">
+                  <li class="flex items-start mt-4">
                     <div class="flex-shrink-0">
-                      <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                     <p class="ml-3 text-base leading-6 text-gray-700">
-                      Supplies included
+                      Extra supplies included
                     </p>
                   </li>
                 </ul>
                 <div class="mt-6 rounded-md shadow">
-                  <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                  <a href="#" class="flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-gray-900 border border-transparent rounded-md hover:bg-gray-800 focus:outline-none focus:shadow-outline">
                     Get started
                   </a>
                 </div>
@@ -157,12 +157,12 @@
           </div>
         </div>
       </div>
-      <div class="mt-4 relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-5">
+      <div class="relative max-w-screen-xl px-4 mx-auto mt-4 sm:px-6 lg:px-8 lg:mt-5">
         <div class="max-w-md mx-auto lg:max-w-5xl">
-          <div class="rounded-lg bg-gray-100 px-6 py-8 sm:p-10 lg:flex lg:items-center">
+          <div class="px-6 py-8 bg-gray-100 rounded-lg sm:p-10 lg:flex lg:items-center">
             <div class="flex-1">
               <div>
-                <span class="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-white text-gray-800">
+                <span class="inline-flex px-4 py-1 text-sm font-semibold leading-5 tracking-wide text-gray-800 uppercase bg-white rounded-full">
                   Custom Pricing
                 </span>
               </div>
@@ -175,7 +175,7 @@
               </div>
             </div>
             <div class="mt-6 rounded-md shadow lg:mt-0 lg:ml-10 lg:flex-shrink-0">
-              <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-900 bg-white hover:text-gray-700 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <a href="#" class="flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-gray-900 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none focus:shadow-outline">
                 Contact Sales
               </a>
             </div>
