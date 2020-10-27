@@ -1,4 +1,5 @@
 # janitornetlify
+[![Netlify Status](https://api.netlify.com/api/v1/badges/38dbfd75-647e-437a-bab1-39f715d4c0f1/deploy-status)](https://app.netlify.com/sites/janitorutah/deploys)
 
 ## Build Setup
 
