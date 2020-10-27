@@ -14,6 +14,18 @@ module.exports = {
     defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || []
   },
   theme: {
+    typography: {
+      default: {
+        css: {
+          a: {
+            color: '#1c64f2',
+            '&:hover': {
+              color: '#3f83f8',
+            },
+          },
+        },
+      },
+    },
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
