@@ -205,7 +205,7 @@
                   </div>
 
                   <div class="mt-6">
-                    <form netlify name="Hero" method="POST" class="space-y-6">
+                    <form name="Hero" method="POST" class="space-y-6">
                       <div>
                         <label for="name" class="sr-only">
                           Full name
