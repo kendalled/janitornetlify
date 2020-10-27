@@ -40,15 +40,29 @@
             </div>
           </div>
           <div class="hidden space-x-10 md:flex md:ml-10">
-            <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Product</a>
-            <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Features</a>
-            <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Marketplace</a>
-            <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Company</a>
+            <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Home</a>
+            <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Projects</a>
+            <div class="relative">
+              <button :class="[ flyoutOpen ? 'text-gray-400' : 'text-white']" type="button" class="inline-flex items-center space-x-2 text-base font-medium leading-6 transition duration-150 ease-in-out group hover:text-gray-300 focus:outline-none" @click.prevent="flyoutOpen = !flyoutOpen">
+                <span>Services</span>
+                <!--
+        Heroicon name: chevron-down
+
+        Item active: "text-gray-600", Item inactive: "text-gray-400"
+      -->
+                <svg class="w-5 h-5 text-gray-200 transition duration-150 ease-in-out group-hover:text-gray-300 group-focus:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <TwoColumnFlyout :opened="flyoutOpen" />
+            </div>
+            <!-- <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Services</a> -->
+            <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Contact</a>
           </div>
         </div>
         <div class="hidden md:flex">
           <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-gray-600 border border-transparent rounded-md hover:bg-gray-500 focus:outline-none focus:shadow-outline-gray focus:border-gray-700 active:bg-gray-700">
-            Log in
+            Free Quote
           </a>
         </div>
       </nav>
@@ -80,14 +94,14 @@
                 </div>
               </div>
               <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50" role="menuitem">Product</a>
-                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50" role="menuitem">Features</a>
-                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50" role="menuitem">Marketplace</a>
-                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50" role="menuitem">Company</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50" role="menuitem" @click.prevent="flyoutOpen = !flyoutOpen">Services</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50" role="menuitem">Projects</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50" role="menuitem">About Us</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50" role="menuitem">Contact</a>
               </div>
               <div>
                 <a href="#" class="block w-full px-5 py-3 font-medium text-center text-blue-600 transition duration-150 ease-in-out bg-gray-50 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:bg-gray-100 focus:text-blue-700" role="menuitem">
-                  Log in
+                  Free Quote
                 </a>
               </div>
             </div>
@@ -101,8 +115,9 @@
             <div class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
               <div>
                 <a href="#" class="inline-flex items-center p-1 pr-2 text-white bg-gray-900 rounded-full sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
-                  <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-blue-500 rounded-full">Covid-19</span>
-                  <span class="ml-4 text-sm leading-5">How we can help your business</span>
+                  <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-blue-500 rounded-full">covid-19</span>
+                  <span class="ml-4 text-sm leading-5 sm:hidden">How we can help</span>
+                  <span class="hidden ml-4 text-sm leading-5 sm:inline">How we can clean your space</span>
                   <svg class="w-5 h-5 ml-2 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                   </svg>
@@ -221,7 +236,7 @@
                       <div>
                         <span class="block w-full rounded-md shadow-sm">
                           <button type="submit" class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white transition duration-150 ease-in-out bg-blue-600 border border-transparent rounded-md hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700">
-                            Create your account
+                            Start with a free quote
                           </button>
                         </span>
                       </div>
@@ -247,6 +262,7 @@ export default {
   name: 'HeroNew',
   data () {
     return {
+      flyoutOpen: false,
       openMobile: false
     }
   }
