@@ -70,7 +70,7 @@
               Quote Request
             </h2>
           </div>
-          <form ref="quote" name="Quote Request" netlify method="POST" class="grid h-full grid-cols-1 row-gap-6 mt-4 md:h-64 sm:grid-cols-2 sm:col-gap-8">
+          <form ref="quote" name="Quote Request" action="https://formspree.io/xrganlwa" method="POST" class="grid h-full grid-cols-1 row-gap-6 mt-4 md:h-64 sm:grid-cols-2 sm:col-gap-8">
             <div v-show="isStepOne">
               <label for="first_name" class="block text-sm font-medium leading-5 text-gray-700">First name</label>
               <div class="relative mt-1 rounded-md shadow-sm">
