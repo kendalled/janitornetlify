@@ -43,7 +43,9 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content'
   ],
-  content: {},
+  content: {
+    liveEdit: false
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
