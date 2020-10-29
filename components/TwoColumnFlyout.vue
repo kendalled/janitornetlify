@@ -16,20 +16,20 @@
       <div class="rounded-lg shadow-lg">
         <div class="overflow-hidden rounded-lg shadow-xs">
           <div class="relative z-20 grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-            <a href="#" class="flex items-start p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
+            <nuxt-link to="/school" class="flex items-start p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
               <!-- Heroicon name: chart-bar -->
               <svg class="flex-shrink-0 w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
               <div class="space-y-1">
                 <p class="text-base font-medium leading-6 text-gray-900">
-                  Analytics
+                  School Cleaning
                 </p>
                 <p class="text-sm leading-5 text-gray-500">
-                  Get a better understanding of where your traffic is coming from.
+                  Santiize any classroom space, from cubicles to hallways.
                 </p>
               </div>
-            </a>
+            </nuxt-link>
             <a href="#" class="flex items-start p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
               <!-- Heroicon name: cursor-click -->
               <svg class="flex-shrink-0 w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
