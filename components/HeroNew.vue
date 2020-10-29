@@ -40,8 +40,8 @@
             </div>
           </div>
           <div class="hidden space-x-10 md:flex md:ml-10">
-            <nuxt-link to="/hello" title="Sample content page" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">
-              Home
+            <nuxt-link to="/" title="Home page" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">
+              Our Work
             </nuxt-link>
             <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Projects</a>
             <div class="relative">
