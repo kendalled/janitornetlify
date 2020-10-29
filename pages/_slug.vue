@@ -1,25 +1,21 @@
 <template>
-  <div class="mx-auto prose-sm prose sm:prose lg:prose-lg xl:prose-2xl">
-    <nuxt-content :document="page" />
-  </div>
+  <main class="bg-gray-50">
+    <SecondHero />
+    <!-- <InteriorHero /> -->
+    <TestimonialContent />
+    <BrandedAction />
+    <CheckList />
+    <div class="mx-auto prose-sm prose sm:prose lg:prose-lg xl:prose-2xl">
+      <nuxt-content :document="page" />
+    </div>
+    <TailFoot />
+  </main>
 </template>
 
 <script>
 export default {
-  // async asyncData ({ $content, params, error }) {
-  //   const slug = params.slug || 'index'
-  //   const article = await $content(slug)
-  //     .fetch()
-  //     .catch((err) => {
-  //       error({ statusCode: 404, message: 'Page not found' + err })
-  //     })
-
-  //   return {
-  //     article
-  //   }
-  // },
   async asyncData ({ $content, params, error }) {
-    const slug = params.slug || 'hello'
+    const slug = params.slug || 'index'
     const page = await $content(slug)
       .fetch()
       .catch((err) => {
