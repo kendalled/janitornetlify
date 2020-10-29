@@ -1,10 +1,10 @@
 <template>
   <!-- no width utilities needed? -->
-  <div class="flex w-full max-w-xs justify-center lg:mt-10 z-20 hidden lg:block">
+  <div class="z-20 justify-center hidden w-full max-w-xs lg:mt-10 lg:block">
     <!-- w-56 -->
-    <nav id="nav" class="w-full relative">
+    <nav id="nav" class="relative w-full">
       <span
-        class="z-10 absolute h-10 w-full bg-white rounded-lg shadow ease-out transition-transform duration-300"
+        class="absolute z-10 w-full h-10 transition-transform duration-300 ease-out bg-white rounded-lg shadow"
         :style="{ transform: `translateY(calc(100% * ${selected}))` }"
       />
       <ul class="relative z-20">
@@ -12,13 +12,13 @@
           <button
             type="button"
             :aria-selected="selected === j"
-            class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline"
+            class="flex items-center w-full px-3 py-2 focus:outline-none focus-visible:underline"
             @click="changeTab(j)"
           >
             <svg
               v-if="tab === 'Services'"
               :class="selected === j ? 'text-blue-400' : 'text-gray-500'"
-              class="h-6 w-6 transition-all ease-out duration-300"
+              class="w-6 h-6 transition-all duration-300 ease-out"
               stroke="currentColor"
               fill="none"
               viewBox="0 0 24 24"
@@ -34,12 +34,12 @@
               stroke-width="2"
               viewBox="0 0 24 24"
               :class="selected === 1 ? 'text-blue-400' : 'text-gray-500'"
-              class="h-6 w-6 transition-all ease-out duration-300"
+              class="w-6 h-6 transition-all duration-300 ease-out"
             ><path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>
             <svg
               v-if="tab === 'Team'"
               :class="selected === j ? 'text-blue-400' : 'text-gray-500'"
-              class="h-6 w-6 transition-all ease-out duration-300"
+              class="w-6 h-6 transition-all duration-300 ease-out"
               stroke="currentColor"
               fill="none"
               viewBox="0 0 24 24"
@@ -55,12 +55,12 @@
               stroke-width="2"
               viewBox="0 0 24 24"
               :class="selected === 3 ? 'text-blue-400' : 'text-gray-500'"
-              class="h-6 w-6 transition-all ease-out duration-300"
+              class="w-6 h-6 transition-all duration-300 ease-out"
             ><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
 
             <span
               :class="selected === j ? 'text-blue-600' : 'text-gray-700'"
-              class="ml-2 text-sm font-medium transition-all ease-out duration-300"
+              class="ml-2 text-sm font-medium transition-all duration-300 ease-out"
             >
               {{ tab }}
             </span>

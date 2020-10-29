@@ -1,7 +1,7 @@
 <template>
-  <div class="mt-4 mb-1 relative z-20">
+  <div class="relative z-20 mt-4 mb-1">
     <div class="block lg:hidden">
-      <select v-model="stringInput" aria-label="Selected tab" class="form-select block w-full">
+      <select v-model="stringInput" aria-label="Selected tab" class="block w-full form-select">
         <option selected>
           Our Services
         </option>
