@@ -19,9 +19,10 @@ export default {
   //   }
   // },
   async asyncData ({ $content, params, error }) {
-    const slug = params.slug || 'index'
+    const slug = params.slug || 'hello'
     const page = await $content(slug)
-      .fetch().catch((err) => {
+      .fetch()
+      .catch((err) => {
         error({ statusCode: 404, message: 'Page not found' + err })
       })
 

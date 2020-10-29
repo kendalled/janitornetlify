@@ -40,7 +40,9 @@
             </div>
           </div>
           <div class="hidden space-x-10 md:flex md:ml-10">
-            <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Home</a>
+            <nuxt-link to="/hello" title="Sample content page" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">
+              Home
+            </nuxt-link>
             <a href="#" class="font-medium text-white transition duration-150 ease-in-out hover:text-gray-300">Projects</a>
             <div class="relative">
               <button :class="[ flyoutOpen ? 'text-gray-400' : 'text-white']" type="button" class="inline-flex items-center space-x-2 text-base font-medium leading-6 transition duration-150 ease-in-out group hover:text-gray-300 focus:outline-none" @click.prevent="flyoutOpen = !flyoutOpen">
