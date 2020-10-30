@@ -8,7 +8,7 @@
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="mx-auto text-base max-w-prose lg:max-w-none">
         <p class="text-base font-semibold leading-6 tracking-wide text-blue-600 uppercase">
-          Transactions
+          expert staff
         </p>
         <h1 class="mt-2 mb-8 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
           What makes us different
@@ -16,7 +16,7 @@
       </div>
       <div class="relative z-10 mx-auto mb-8 text-base max-w-prose lg:max-w-5xl lg:mx-0 lg:pr-72">
         <p class="text-lg leading-7 text-gray-500">
-          Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.
+          The award winning service that Janitor Utah provides is an easy option for any large space - whether medical, commercial, or even just your house.
         </p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start">
@@ -34,9 +34,9 @@
           </div>
           <div class="flex mx-auto text-base max-w-prose lg:max-w-none">
             <div class="rounded-md shadow">
-              <a href="#" class="flex items-center justify-center w-full px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-blue-600 border border-transparent rounded-md hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue">
-                Contact sales
-              </a>
+              <nuxt-link title="Quote form" to="/quote" class="flex items-center justify-center w-full px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-blue-600 border border-transparent rounded-md hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue">
+                Get started
+              </nuxt-link>
             </div>
             <div class="ml-4 rounded-md shadow">
               <a href="#" class="flex items-center justify-center w-full px-5 py-3 text-base font-medium leading-6 text-blue-600 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-blue-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue">

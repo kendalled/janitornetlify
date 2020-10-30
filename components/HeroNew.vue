@@ -63,9 +63,9 @@
           </div>
         </div>
         <div class="hidden md:flex">
-          <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-gray-600 border border-transparent rounded-md hover:bg-gray-500 focus:outline-none focus:shadow-outline-gray focus:border-gray-700 active:bg-gray-700">
+          <nuxt-link to="/quote" title="Quote form" class="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-gray-600 border border-transparent rounded-md hover:bg-gray-500 focus:outline-none focus:shadow-outline-gray focus:border-gray-700 active:bg-gray-700">
             Free Quote
-          </a>
+          </nuxt-link>
         </div>
       </nav>
 
