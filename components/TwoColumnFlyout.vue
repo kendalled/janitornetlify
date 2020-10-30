@@ -12,66 +12,63 @@
     leave-class="translate-y-0 opacity-100"
     leave-to-class="translate-y-1 opacity-0"
   >
-    <div v-show="opened" class="absolute w-screen max-w-md px-2 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0">
+    <div v-show="openFlyout" ref="flyout" v-click-outside="vcoConfig" class="absolute w-screen max-w-md px-2 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0">
       <div class="rounded-lg shadow-lg">
         <div class="overflow-hidden rounded-lg shadow-xs">
           <div class="relative z-20 grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-            <nuxt-link to="/school" class="flex items-start p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
-              <!-- Heroicon name: chart-bar -->
-              <svg class="flex-shrink-0 w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            <nuxt-link v-for="(link, l) in links" :key="l" :to="link.slug" :title="link.title" class="flex items-start p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
+              <!-- Heroicon name: academic-cap -->
+              <svg
+                v-if="l === 0"
+                class="flex-shrink-0 w-6 h-6 text-blue-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path fill="#fff" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+              </svg>
+              <svg
+                v-if="l === 1"
+                class="flex-shrink-0 w-6 h-6 text-blue-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+              <svg
+                v-if="l === 2"
+                class="flex-shrink-0 w-6 h-6 text-blue-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+              <svg
+                v-if="l === 3"
+                class="flex-shrink-0 w-6 h-6 text-blue-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
               </svg>
               <div class="space-y-1">
                 <p class="text-base font-medium leading-6 text-gray-900">
-                  School Cleaning
+                  {{ link.title }}
                 </p>
                 <p class="text-sm leading-5 text-gray-500">
-                  Santiize any classroom space, from cubicles to hallways.
+                  {{ link.blurb }}
                 </p>
               </div>
             </nuxt-link>
-            <a href="#" class="flex items-start p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
-              <!-- Heroicon name: cursor-click -->
-              <svg class="flex-shrink-0 w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-              </svg>
-              <div class="space-y-1">
-                <p class="text-base font-medium leading-6 text-gray-900">
-                  Engagement
-                </p>
-                <p class="text-sm leading-5 text-gray-500">
-                  Speak directly to your customers in a more meaningful way.
-                </p>
-              </div>
-            </a>
-            <a href="#" class="flex items-start p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
-              <!-- Heroicon name: shield-check -->
-              <svg class="flex-shrink-0 w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              <div class="space-y-1">
-                <p class="text-base font-medium leading-6 text-gray-900">
-                  Security
-                </p>
-                <p class="text-sm leading-5 text-gray-500">
-                  Your customers data will be safe and secure.
-                </p>
-              </div>
-            </a>
-            <a href="#" class="flex items-start p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
-              <!-- Heroicon name: refresh -->
-              <svg class="flex-shrink-0 w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-              </svg>
-              <div class="space-y-1">
-                <p class="text-base font-medium leading-6 text-gray-900">
-                  Automations
-                </p>
-                <p class="text-sm leading-5 text-gray-500">
-                  Build strategic funnels that will drive your customers to convert
-                </p>
-              </div>
-            </a>
           </div>
           <div class="px-5 py-5 space-y-6 bg-gray-50 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
             <div class="flow-root">
@@ -101,12 +98,66 @@
 </template>
 
 <script>
+import vClickOutside from 'v-click-outside'
 export default {
   name: 'TwoColumnFlyout',
+  directives: {
+    clickOutside: vClickOutside.directive
+  },
   props: {
     opened: {
       type: Boolean,
       default: false
+    }
+  },
+  data () {
+    return {
+      openFlyout: false,
+      links: [
+        {
+          title: 'School Cleaning',
+          slug: '/school',
+          blurb: 'Sanitize any classroom or campus in minutes. We are trained to clean floors, hallways, & gyms.'
+        },
+        {
+          title: 'Office Cleaning',
+          slug: '/office',
+          blurb: 'Clean any office space, from cubicles to hallways.'
+        },
+        {
+          title: 'Medical Cleaning',
+          slug: '/medical',
+          blurb: 'Sanitize any medical space in minutes with our team.'
+        },
+        {
+          title: 'Construction Cleaning',
+          slug: '/construction',
+          blurb: 'Need to clean up a construction site? We\'ve got you covered.'
+        }
+      ]
+    }
+  },
+  computed: {
+    vcoConfig () {
+      return {
+        handler: this.close,
+        events: ['click'],
+        // activate / deactivate click-outside directive dynamically
+        isActive: this.openFlyout
+      }
+    }
+  },
+  watch: {
+    opened (newVal) {
+      this.openFlyout = newVal
+    },
+    openFlyout (newVal) {
+      this.$emit('toggled', newVal)
+    }
+  },
+  methods: {
+    close () {
+      this.$emit('close')
     }
   }
 }
