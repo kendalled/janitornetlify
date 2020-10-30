@@ -74,7 +74,20 @@
             <div class="hidden md:flex md:space-x-10">
               <a href="#" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Our Work</a>
               <a href="#" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Projects</a>
-              <a href="#" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Services</a>
+              <div class="relative">
+                <button :class="[ flyoutOpen ? 'text-gray-900' : 'text-gray-500 hover:text-gray-900']" type="button" class="inline-flex items-center space-x-2 text-base font-medium leading-6 transition duration-150 ease-in-out group focus:outline-none" @click.prevent="flyoutOpen = !flyoutOpen">
+                  <span>Services</span>
+                  <!--
+        Heroicon name: chevron-down
+
+        Item active: "text-gray-600", Item inactive: "text-gray-400"
+      -->
+                  <svg :class="[flyoutOpen ? 'text-gray-800' : 'text-gray-400']" class="w-5 h-5 transition duration-150 ease-in-out group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <TwoColumnFlyout :opened="flyoutOpen" @close="flyoutOpen = false" />
+              </div>
               <a href="#" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Contact</a>
             </div>
             <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
@@ -130,9 +143,9 @@
         <div class="max-w-screen-xl px-4 mx-auto mt-10 sm:px-6 md:mt-16 lg:mt-20">
           <div class="text-center">
             <h2 class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-              {{ line1 }}
+              {{ page.line1 }}
               <br>
-              <span class="text-blue-600">{{ line2 }}.</span>
+              <span class="text-blue-600">{{ page.line2 }}.</span>
             </h2>
             <p class="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
               Our goal is to provide your campus with a sense of security and trust. We include a comprehensive insurance policy, and perform full background checks for our staff.
@@ -146,7 +159,7 @@
           <div class="flex-1 w-full bg-gray-800" />
         </div>
         <div class="max-w-screen-xl px-4 mx-auto sm:px-6">
-          <img class="relative rounded-lg shadow-lg" src="~/static/school.jpg" alt="App screenshot">
+          <img class="relative object-cover w-full rounded-lg shadow-lg h-96" :src="page.image" :alt="page.alt">
         </div>
       </div>
     </div>
@@ -181,13 +194,28 @@
 export default {
   name: 'SecondHero',
   props: {
-    line1: {
-      type: String,
-      default: 'Sanitize your campus'
-    },
-    line2: {
-      type: String,
-      default: 'with our expert help.'
+    page: {
+      type: Object,
+      default () {
+        return {}
+      }
+    }
+    // line1: {
+    //   type: String,
+    //   default: 'Sanitize your campus'
+    // },
+    // line2: {
+    //   type: String,
+    //   default: 'with our expert help.'
+    // },
+    // img: {
+    //   type: String,
+    //   default: '~/static/school.jpg'
+    // }
+  },
+  data () {
+    return {
+      flyoutOpen: false
     }
   }
 }
