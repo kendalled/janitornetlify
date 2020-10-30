@@ -1,6 +1,6 @@
 <template>
   <main class="bg-gray-50">
-    <SecondHero />
+    <SecondHero :line1="page.line1" :line2="page.line2" />
     <!-- <InteriorHero /> -->
     <TestimonialContent />
     <BrandedAction />

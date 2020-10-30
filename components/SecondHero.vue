@@ -130,9 +130,9 @@
         <div class="max-w-screen-xl px-4 mx-auto mt-10 sm:px-6 md:mt-16 lg:mt-20">
           <div class="text-center">
             <h2 class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-              Sanitize your campus
+              {{ line1 }}
               <br>
-              <span class="text-blue-600">with our expert help.</span>
+              <span class="text-blue-600">{{ line2 }}.</span>
             </h2>
             <p class="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
               Our goal is to provide your campus with a sense of security and trust. We include a comprehensive insurance policy, and perform full background checks for our staff.
@@ -179,6 +179,16 @@
 
 <script>
 export default {
-  name: 'SecondHero'
+  name: 'SecondHero',
+  props: {
+    line1: {
+      type: String,
+      default: 'Sanitize your campus'
+    },
+    line2: {
+      type: String,
+      default: 'with our expert help.'
+    }
+  }
 }
 </script>
