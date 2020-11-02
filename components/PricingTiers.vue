@@ -167,9 +167,13 @@
                 </span>
               </div>
               <div class="mt-4 text-lg leading-7 text-gray-600">
-                Only pay for what you need. Get full access to our team of janitorial experts at a moment's notice, scaled to your business. Starting at just
+                Only pay for what you need. Get full access to our team of janitorial experts at a moment's notice. Get started by contacting us
                 <strong class="font-semibold text-gray-900">
-                  $99.
+                  in person
+                </strong>
+                or
+                <strong class="font-semibold text-gray-900">
+                  on the phone.
                 </strong>
                 <!-- . -->
               </div>
