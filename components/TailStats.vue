@@ -21,7 +21,7 @@
                   Buildings Cleaned
                 </dt>
                 <dd class="order-1 text-5xl font-extrabold leading-none text-blue-600" aria-describedby="item-1">
-                  500+
+                  568
                 </dd>
               </div>
               <div class="flex flex-col p-6 text-center border-t border-b border-gray-100 sm:border-0 sm:border-l sm:border-r">
@@ -34,10 +34,10 @@
               </div>
               <div class="flex flex-col p-6 text-center border-t border-gray-100 sm:border-0 sm:border-l">
                 <dt class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
-                  Employees
+                  Cleaning Crews
                 </dt>
                 <dd class="order-1 text-5xl font-extrabold leading-none text-blue-600">
-                  489
+                  100+
                 </dd>
               </div>
             </dl>
