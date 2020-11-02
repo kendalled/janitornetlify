@@ -27,6 +27,7 @@
             <div class="flex items-center -mr-2 md:hidden">
               <button
                 id="main-menu"
+                ref="menuButton"
                 type="button"
                 class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
                 aria-label="Main menu"
@@ -80,7 +81,7 @@
         leave-class="scale-100 opacity-100"
         leave-to-class="scale-95 opacity-0"
       >
-        <div v-if="openMobile" class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden">
+        <div v-if="openMobile" ref="flyout" v-click-outside="vcoConfig" class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden">
           <div class="rounded-lg shadow-md">
             <div class="overflow-hidden bg-white rounded-lg shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
               <div class="flex items-center justify-between px-5 pt-4">
@@ -102,9 +103,9 @@
                 <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50" role="menuitem">Contact</a>
               </div>
               <div>
-                <a href="#" class="block w-full px-5 py-3 font-medium text-center text-blue-600 transition duration-150 ease-in-out bg-gray-50 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:bg-gray-100 focus:text-blue-700" role="menuitem">
+                <nuxt-link to="/quote" title="Quote form" class="block w-full px-5 py-3 font-medium text-center text-blue-600 transition duration-150 ease-in-out bg-gray-50 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:bg-gray-100 focus:text-blue-700" role="menuitem">
                   Free Quote
-                </a>
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -260,12 +261,32 @@
 </template>
 
 <script>
+import vClickOutside from 'v-click-outside'
 export default {
   name: 'HeroNew',
+  directives: {
+    clickOutside: vClickOutside.directive
+  },
   data () {
     return {
       flyoutOpen: false,
       openMobile: false
+    }
+  },
+  computed: {
+    vcoConfig () {
+      return {
+        handler: this.close,
+        events: ['click'],
+        // activate / deactivate click-outside directive dynamically
+        isActive: this.openMobile
+      }
+    }
+  },
+  methods: {
+    close () {
+      this.openMobile = false
+      this.$refs.menuButton.blur()
     }
   }
 }
