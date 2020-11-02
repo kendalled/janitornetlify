@@ -3,7 +3,7 @@
   Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
   Read the documentation to get started: https://tailwindui.com/documentation
 -->
-  <section class="relative pt-6 pb-12 bg-gray-100 lg:pb-20">
+  <section class="relative pt-6 pb-12 bg-gray-50 lg:pb-20">
     <div>
       <InteriorNav />
       <div class="max-w-screen-xl px-4 py-16 mx-auto sm:py-24 sm:px-6 lg:px-8">
