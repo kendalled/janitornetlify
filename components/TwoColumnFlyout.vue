@@ -12,7 +12,7 @@
     leave-class="translate-y-0 opacity-100"
     leave-to-class="translate-y-1 opacity-0"
   >
-    <div v-if="openFlyout" ref="flyout" v-click-outside="vcoConfig" class="absolute z-50 w-screen max-w-md px-2 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0">
+    <div v-show="openFlyout" ref="flyout" v-click-outside="vcoConfig" class="absolute z-50 w-screen max-w-md px-2 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0">
       <div class="rounded-lg shadow-lg">
         <div class="overflow-hidden rounded-lg shadow-xs">
           <div class="relative z-20 grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
