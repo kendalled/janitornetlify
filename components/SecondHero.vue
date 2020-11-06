@@ -87,19 +87,19 @@
         </h3>
         <div class="grid grid-cols-2 gap-8 mt-8 md:grid-cols-6 lg:grid-cols-5">
           <div class="flex justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo.svg" alt="Tuple">
+            <img class="h-12" src="https://tailwindui.com/img/logos/v1/tuple-logo.svg" alt="Tuple">
           </div>
           <div class="flex justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo.svg" alt="Mirage">
+            <img class="h-12" src="https://tailwindui.com/img/logos/v1/mirage-logo.svg" alt="Mirage">
           </div>
           <div class="flex justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo.svg" alt="StaticKit">
+            <img class="h-12" src="https://tailwindui.com/img/logos/v1/statickit-logo.svg" alt="StaticKit">
           </div>
           <div class="flex justify-center col-span-1 md:col-span-3 lg:col-span-1">
-            <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo.svg" alt="Transistor">
+            <img class="h-12" src="https://tailwindui.com/img/logos/v1/transistor-logo.svg" alt="Transistor">
           </div>
           <div class="flex justify-center col-span-2 md:col-span-3 lg:col-span-1">
-            <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo.svg" alt="Workcation">
+            <img class="h-12" src="https://tailwindui.com/img/logos/v1/workcation-logo.svg" alt="Workcation">
           </div>
         </div>
       </div>
